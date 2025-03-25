@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "AI Video Summarizer",
+  "version": "1.0",
+  "description": "Get AI-powered summaries of video transcripts using Hugging Face",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://api-inference.huggingface.co/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/chrome-logo.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "128": "icons/chrome-logo.svg"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ]
+} 

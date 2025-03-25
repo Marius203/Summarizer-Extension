@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Video Summarizer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Video Summarizer</h1>
+    <div class="subtitle">Get instant AI-powered summaries of any YouTube video</div>
+    
+    <div id="status" class="status"></div>
+    
+    <div class="api-key-section">
+      <div class="api-key-input">
+        <input type="password" id="api-key-input" placeholder="Enter your Hugging Face API key">
+        <button id="save-api-key" class="secondary-btn">Save</button>
+      </div>
+      <div id="api-key-status" class="status"></div>
+    </div>
+    
+    <div id="summary" class="summary-container">
+      <div class="loading-spinner" id="loading" style="display: none;">
+        <div class="spinner"></div>
+        <div class="loading-text">Processing...</div>
+      </div>
+      <div id="summary-content"></div>
+    </div>
+    
+    <button id="summarize-btn" class="summarize-btn">
+      <span class="button-text">Generate Summary</span>
+    </button>
+    
+    <div class="features">
+      <div class="feature">
+        <span class="feature-text">Accurate Summaries</span>
+      </div>
+      <div class="feature">
+        <span class="feature-text">Lightning Fast</span>
+      </div>
+      <div class="feature">
+        <span class="feature-text">Secure & Private</span>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="error-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h2>Error</h2>
+        <p id="error-message"></p>
+        <button class="close-modal">Close</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
