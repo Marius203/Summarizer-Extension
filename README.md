@@ -42,7 +42,3 @@ This extension requires an active internet connection and a valid Hugging Face A
 - The extension only processes transcripts from the current YouTube video
 - No data is stored locally or sent to any servers except Hugging Face's API
 - Your Hugging Face API key is only used for generating summaries
-
-## License
-
-MIT License 
